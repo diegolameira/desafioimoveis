@@ -1,0 +1,24 @@
+@import '../styles/variables.scss';
+
+@import 'sliders/sliders.scss';
+@import 'chart/chart.scss';
+@import 'states/selector.scss';
+
+
+.total-costs
+{
+
+  @include breakpoint(phablet)
+  {
+    display: flex;
+    flex-direction: column;
+    // height: 50vh;
+    // order: 2;
+
+    .chart
+    {
+      height: 100%;
+    }
+
+  }
+}

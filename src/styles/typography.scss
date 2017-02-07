@@ -1,0 +1,44 @@
+body
+{
+    color: #333;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10px;
+
+    @include breakpoint(tablet)
+    {
+      font-size: 16px;
+    }
+}
+
+h1, h2
+{
+    color: #F70;
+}
+
+h1
+{
+    font-size: 2.333em;
+}
+
+h2
+{
+    font-size: 1.4em;
+
+    @include breakpoint(phablet)
+    {
+      margin-top: 1.2rem;
+    }
+
+    @include breakpoint(tablet)
+    {
+      margin-top: 1.8rem;
+    }
+
+}
+
+label
+{
+  display: block;
+  font-size: 1.4em;
+  line-height: 2;
+}

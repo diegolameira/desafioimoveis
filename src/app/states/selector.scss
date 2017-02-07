@@ -1,0 +1,35 @@
+.Select
+{
+  font-size: 1rem;
+  line-height: 1rem;
+}
+
+.Select-placeholder,
+.Select--single > .Select-control .Select-value
+{
+    background: #F70;
+    color: #fff;
+}
+
+.Select-control
+{
+    border: 0;
+}
+
+.has-value.Select--single > .Select-control .Select-value .Select-value-label,
+.has-value.is-pseudo-focused.Select--single > .Select-control .Select-value .Select-value-label
+{
+    color: #fff;
+    font-weight: bolder;
+}
+
+.Select-arrow
+{
+    border-color: #fff transparent transparent;
+}
+
+.Select--single.is-open > .Select-control .Select-value
+{
+    background: rgba(255, 119, 0, 0.4);
+    color: #F70;
+}
