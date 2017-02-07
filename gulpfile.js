@@ -1,6 +1,7 @@
 const gulp = require('gulp');
 const HubRegistry = require('gulp-hub');
 const browserSync = require('browser-sync');
+const ghPages = require('gulp-gh-pages');
 
 const conf = require('./conf/gulp.conf');
 
@@ -17,6 +18,7 @@ gulp.task('serve', gulp.series('webpack:watch', 'watch', 'browsersync'));
 gulp.task('serve:dist', gulp.series('default', 'browsersync:dist'));
 gulp.task('default', gulp.series('clean', 'build'));
 gulp.task('watch', watch);
+gulp.task('deploy', gulp.series('default', deploy));
 
 function reloadBrowserSync(cb) {
   browserSync.reload();
@@ -25,5 +27,11 @@ function reloadBrowserSync(cb) {
 
 function watch(done) {
   gulp.watch(conf.path.tmp('index.html'), reloadBrowserSync);
+  done();
+}
+
+function deploy(done) {
+  gulp.src('./dist/**/*')
+    .pipe(ghPages());
   done();
 }
