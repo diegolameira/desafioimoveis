@@ -22,7 +22,7 @@ export class App extends Component {
     this.onSelectLocal = this.onSelectLocal.bind(this);
     this.sliderUpdate = this.sliderUpdate.bind(this);
     this.updateChart = this.updateChart.bind(this);
-    this.fetchValores = fetch('https://raw.githubusercontent.com/olxbrasil/desafioimoveis/master/api/valores.json')
+    this.fetchValores = fetch('https://raw.githubusercontent.com/diegolameira/desafioimoveis/master/api/valores.json')
       .then(response => response.json());
   }
   onSelectLocal(state) {
